@@ -187,5 +187,14 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-force-trailing-slashes`,
         `gatsby-plugin-offline`,
+        {
+            resolve: `gatsby-source-ghost`,
+            options: {
+                apiUrl: process.env.APIURL,
+                contentApiKey: process.env.CONTENT_API_KEY,
+                version: `v3` // Ghost API version, optional, defaults to "v3".
+                              // Pass in "v2" if your Ghost install is not on 3.0 yet!!!
+            }
+         }
     ],
 }
